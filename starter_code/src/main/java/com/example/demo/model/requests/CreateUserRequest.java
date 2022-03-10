@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateUserRequest {
 
+	// taken from 1.Auth reference branch
 
 	@JsonProperty
 	private String username;
