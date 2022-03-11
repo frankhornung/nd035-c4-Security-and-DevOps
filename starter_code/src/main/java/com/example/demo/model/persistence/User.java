@@ -49,6 +49,13 @@ public class User {
 		this.password = password;
 	}
 
+	public User(Long id, String username, String password, Cart cart){
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.cart=cart;
+	}
+
 	public User(){
 
 	}
