@@ -36,12 +36,12 @@ public class OrderController {
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			log.error("order creation failed for user {} ", user.getUsername());
+			log.error("ORDER_CREATE_ERROR");
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
-		log.info("order creation successful for user {} ", user.getUsername());
+		log.info("ORDER_CREATE_SUCCESS");
 		return ResponseEntity.ok(order);
 	}
 	
@@ -49,10 +49,10 @@ public class OrderController {
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			log.error("order history retrieval failed for user {}", user.getUsername());
+			log.error("ORDER_HISTORY_ERROR");
 			return ResponseEntity.notFound().build();
 		}
-		log.info("order history retrieval successful for user {}", user.getUsername());
+		log.info("ORDER_HISTORY_SUCCESS");
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }
