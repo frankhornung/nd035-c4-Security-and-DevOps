@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.repositories.UserRepository;
-
+// taken from 1.Auth reference branch
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 

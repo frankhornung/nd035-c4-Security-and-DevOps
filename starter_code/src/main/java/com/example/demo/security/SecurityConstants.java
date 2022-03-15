@@ -1,5 +1,5 @@
 package com.example.demo.security;
-
+// taken from 1.Auth reference branch
 public class SecurityConstants {
 
 	public static final String SECRET = "oursecretkey";

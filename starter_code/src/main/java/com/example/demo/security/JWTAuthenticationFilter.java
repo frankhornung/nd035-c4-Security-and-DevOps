@@ -21,6 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
+// taken from 1.Auth reference branch
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
 	 private AuthenticationManager authenticationManager;
